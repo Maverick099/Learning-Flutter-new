@@ -42,7 +42,7 @@ flutter:
   fonts:
     - family: CustomIcon1
       fonts:
-        - asset: \icons\flutter-icons\fonts\CustomIcon1.ttf
+        - asset: icons/flutter-icons/fonts/CustomIcon1.ttf
 
 
   # To add assets to your application, add an assets section, like this:

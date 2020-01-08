@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'custom_icon1_icons.dart';
+import 'custom_icon1.dart';
+
 void main() {
   runApp(UnitConverterApp());
 }
@@ -9,7 +10,6 @@ class UnitConverterApp extends StatelessWidget {
 
   String Name = 'Length';
   var colorT = Colors.blue;
-  var IconsLO = Icons.calendar_today;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,6 @@ class UnitConverterApp extends StatelessWidget {
 }
 
 class RectangleContainer extends StatelessWidget {
-
   static const _CategoryNames = <String>[
     'Length',
     'Area',
@@ -45,25 +44,27 @@ class RectangleContainer extends StatelessWidget {
     Colors.red
   ];
 
-  static const _IconsNames =[
-    Icon(CustomIcon1.ruler),
-    Icon(CustomIcon1.lab),
-    Icon(CustomIcon1.weight_scale),
+  static const _IconsNames = [
+    Icon(CustomIcon1.ruler_),
+    Icon(CustomIcon1.area_),
+    Icon(CustomIcon1.lab_),
+    Icon(CustomIcon1.weight_scale_),
     Icon(Icons.access_time),
     Icon(Icons.disc_full),
     Icon(Icons.power),
     Icon(Icons.euro_symbol)
+  ];
 
-  ]
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
         backgroundColor: Colors.blueGrey[700],
-        appBar: AppBar(backgroundColor: Colors.blueGrey[700],
+        appBar: AppBar(
+          backgroundColor: Colors.blueGrey[700],
           title: Text(
             "Unit Converter",
-            style: TextStyle(fontSize: 30.0,color: Colors.white),
+            style: TextStyle(fontSize: 30.0, color: Colors.white),
           ),
           elevation: 0.0,
         ),
@@ -74,32 +75,29 @@ class RectangleContainer extends StatelessWidget {
                   height: 100.0,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Center(
-                      child: InkWell(
-                        splashColor: _ColorNames[CategoryNumber],
-                        highlightColor: _ColorNames[CategoryNumber],
-                        borderRadius: BorderRadius.circular(50.0),
-                        onTap: () {
-                          print("I was tapped");
-                        },
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: <Widget>[
-                            Expanded(
-                                child: Padding(
+                    child: InkWell(
+                      splashColor: _ColorNames[CategoryNumber],
+                      highlightColor: _ColorNames[CategoryNumber],
+                      borderRadius: BorderRadius.circular(50.0),
+                      onTap: () {
+                        print("I was tapped");
+                      },
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          Expanded(
+                              child: Padding(
                                   padding: const EdgeInsets.all(16.0),
-                                  child:
-                            )),
-                            Expanded(
-                              child: Center(
-                                child: Text(
-                                  _CategoryNames[CategoryNumber],
-                                  style: TextStyle(fontSize: 24.0),
-                                ),
+                                  child: _IconsNames[CategoryNumber])),
+                          Expanded(
+                            child: Center(
+                              child: Text(
+                                _CategoryNames[CategoryNumber],
+                                style: TextStyle(fontSize: 24.0),
                               ),
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
                     ),
                   ));
