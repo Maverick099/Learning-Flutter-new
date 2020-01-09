@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'custom_icon1.dart';
 
 void main() {
@@ -45,14 +46,14 @@ class RectangleContainer extends StatelessWidget {
   ];
 
   static const _IconsNames = [
-    Icon(CustomIcon1.ruler_),
-    Icon(CustomIcon1.area_),
-    Icon(CustomIcon1.lab_),
-    Icon(CustomIcon1.weight_scale_),
-    Icon(Icons.access_time),
-    Icon(Icons.disc_full),
-    Icon(Icons.power),
-    Icon(Icons.euro_symbol)
+    Icon(CustomIcon1.ruler_, size: 50.0, color: Colors.white30),
+    Icon(CustomIcon1.area_, size: 50.0, color: Colors.white30),
+    Icon(CustomIcon1.lab_, size: 50.0, color: Colors.white30),
+    Icon(CustomIcon1.weight_scale_, size: 50.0, color: Colors.white30),
+    Icon(Icons.access_time, size: 50.0, color: Colors.white30),
+    Icon(Icons.disc_full, size: 50.0, color: Colors.white30),
+    Icon(Icons.power, size: 50.0, color: Colors.white30),
+    Icon(Icons.euro_symbol, size: 50.0, color: Colors.white30)
   ];
 
   @override
@@ -78,7 +79,7 @@ class RectangleContainer extends StatelessWidget {
                     child: InkWell(
                       splashColor: _ColorNames[CategoryNumber],
                       highlightColor: _ColorNames[CategoryNumber],
-                      borderRadius: BorderRadius.circular(50.0),
+                      borderRadius: BorderRadius.circular(25.0),
                       onTap: () {
                         print("I was tapped");
                       },
@@ -87,13 +88,14 @@ class RectangleContainer extends StatelessWidget {
                         children: <Widget>[
                           Expanded(
                               child: Padding(
-                                  padding: const EdgeInsets.all(16.0),
+                                  padding: const EdgeInsets.all(8.0),
                                   child: _IconsNames[CategoryNumber])),
                           Expanded(
                             child: Center(
                               child: Text(
                                 _CategoryNames[CategoryNumber],
-                                style: TextStyle(fontSize: 24.0),
+                                style: TextStyle(
+                                    fontSize: 25.0, color: Colors.white),
                               ),
                             ),
                           ),
