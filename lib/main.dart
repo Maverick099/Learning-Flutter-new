@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'custom_icon1.dart';
+import 'CpnversionPage.dart';
 
 void main() {
   runApp(UnitConverterApp());
@@ -82,6 +83,13 @@ class RectangleContainer extends StatelessWidget {
                       borderRadius: BorderRadius.circular(25.0),
                       onTap: () {
                         print("I was tapped");
+                        ConversionPage.Name = _CategoryNames[CategoryNumber];
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ConversionPage()),
+                        );
+
                       },
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.stretch,

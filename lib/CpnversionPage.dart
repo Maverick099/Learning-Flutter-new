@@ -3,12 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class ConversionPage extends StatefulWidget {
+  static var Name;
+  static var j;
+
   @override
   _unitConnvertPage createState() => _unitConnvertPage();
 }
 
 class _unitConnvertPage extends State<ConversionPage> {
   @override
+  var _name = ConversionPage.Name;
+
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
@@ -16,7 +21,7 @@ class _unitConnvertPage extends State<ConversionPage> {
       appBar: AppBar(
         backgroundColor: Colors.blue[200],
         title: Text(
-          "Conversion",
+          "${_name} Conversion",
           style: TextStyle(
             color: Colors.white,
             fontSize: 30.0,
